@@ -11,31 +11,9 @@
 
     <table>
 
-        <script>
-
-            const table = document.querySelector('table');
-
-            window.addEventListener("onload", () => {
-                showOffers();
-            })
-
-            const showOffers = () => {
-                fetch("/offers")
-                .then(response => response.json())
-                .then(offers => {
-                    for (let i = 0; i < offers.length; i++) {
-                        let row = document.createElement("tr");
-                        row.innerHTML = `<td> ${offers[i].logoLink} </td> <td> ${offers[i].title} </td> <td> ${offers[i].companyName} </td>`
-                        table.appendChild(row);
-                    }
-                })
-            }
-
-        </script>
-
-    @for(int i = 0; i < 10; i++) {
+    @foreach(var offer in offersList) {
         <tr>
-            <td> I: @i </td>
+            <td> </td>
         </tr>
     }
     </table>
