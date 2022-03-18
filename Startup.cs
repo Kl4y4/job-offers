@@ -17,6 +17,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
+using Microsoft.AspNetCore.Cors;
 
 // docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo
 namespace JobOffers
@@ -48,6 +49,10 @@ namespace JobOffers
                 options.SuppressAsyncSuffixInActionNames = false;
             });
 
+            services.AddRazorPages();
+
+            services.AddCors();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "JobOffers", Version = "v1" });
@@ -62,17 +67,24 @@ namespace JobOffers
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "JobOffers v1"));
+            } else {
+                app.UseExceptionHandler("/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapRazorPages();
             });
         }
     }
