@@ -36,9 +36,12 @@ namespace JobOffers.Pages {
             return offersCollection.Find(new BsonDocument()).ToList();
         }
 
-        public void OnGet()
-        {
+        public List<Offer> GetList() {
+            return offersList;
+        }
 
+        public void OnGet() {
+            
         }
     }
 }

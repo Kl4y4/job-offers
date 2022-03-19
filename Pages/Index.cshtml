@@ -1,19 +1,20 @@
 ﻿@page
+@using Entities
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-
+    List<Offer> offersList = Model.GetList();
 }
 
 <div class="text-center">
-    
-    
 
-    <table>
+    <table style="padding: 10px; background-color: lightgray;">
 
     @foreach(var offer in offersList) {
         <tr>
-            <td> </td>
+            <td> @offer.LogoLink </td>
+            <td> @offer.Title </td>
+            <td> @offer.CompanyName </td>
         </tr>
     }
     </table>
