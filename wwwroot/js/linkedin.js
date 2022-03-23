@@ -15,3 +15,17 @@ jobs = Array(Object.values(list).map(li=>{
 
 }
 ));
+
+fetch("https://localhost:5001/offers", {
+  "method": "POST",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": JSON.stringify(jobs)
+})
+.then(response => {
+  console.log(response);
+})
+.catch(err => {
+  console.error(err);
+});
