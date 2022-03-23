@@ -1,0 +1,308 @@
+_type: export
+__export_format: 4
+__export_date: 2022-03-23T17:52:28.382Z
+__export_source: insomnia.desktop.app:v2022.2.0
+resources:
+  - _id: req_582ee7ee83544cb0aae683b560635add
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1648057584567
+    created: 1648057470727
+    url: https://localhost:5001/offers
+    name: https://localhost:5001/offers
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        [
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4D0BAQEiOifAvjV9vw/company-logo_100_100/0/1619640262440?e=1655942400&v=beta&t=VIHv8yCyTj-64utWmdCm4fZrXCbbFhUGrr0HNAI4uic",
+        		"title": "Javascript / ReactJS Developer",
+        		"companyName": "IQVIA"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C560BAQGEEw9HXvgGzA/company-logo_100_100/0/1639383758689?e=1655942400&v=beta&t=rBOOvAuL_iIE3cSdpIWHeXgk2c6H82ZkNQDaFGo_bxU",
+        		"title": "Senior ReactJS Developer, Remote Poland",
+        		"companyName": "Luxoft"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4D0BAQHJ295LwSbGig/company-logo_100_100/0/1594922995071?e=1655942400&v=beta&t=TX-sxf72p0B4iW3e1MtVaGcjk801oPfzBc-c4BTIlsY",
+        		"title": "Frontend Developer (ReactJS)",
+        		"companyName": "Discovery Inc"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQHyNlRdt_8PSg/company-logo_100_100/0/1641910198385?e=1655942400&v=beta&t=X4ND7LTiRtbfBOzA5mDnuyQgGkr7fxR54CD91B3u9gE",
+        		"title": "Senior Full Stack Developer (.NET + ReactJS)",
+        		"companyName": "EPAM Systems"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQGqGoXg2Z3aNw/company-logo_100_100/0/1612170228099?e=1655942400&v=beta&t=wnydH7yFgSDONgtyFPJDMkeLu_XH5JGzHu-At1OzhCs",
+        		"title": "Full Stack Developer",
+        		"companyName": "Loyalty Point Sp. z o. o."
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C560BAQE450y16y19fw/company-logo_100_100/0/1640272443301?e=1655942400&v=beta&t=2P_S8BA_eISWPRq3L3UJweKzzeSVsNg-INSAWKv4EOk",
+        		"title": "Junior Full Stack Developer (Java+Angular)",
+        		"companyName": "Consdata"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C560BAQH5uqGpoDcCBA/company-logo_100_100/0/1647140808595?e=1655942400&v=beta&t=RNliijfJGbkQsLn6FFWnz2x1VqpibT-lG6pfYbuCm2Y",
+        		"title": "Software Engineer (.NET, ReactJS)",
+        		"companyName": "hipages Group"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQE6gvueaNPxfw/company-logo_100_100/0/1645786335099?e=1655942400&v=beta&t=UAVtI5wCoWjVZAUHDzAxdDBrMZi83KlXNyXkXuAcIdA",
+        		"title": "Frontend Developer",
+        		"companyName": "Livespace - Sell Smarter"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4D0BAQEN3Ifl-svPpw/company-logo_100_100/0/1646224001969?e=1655942400&v=beta&t=K6U1MGeU8we3NCUpOctfN_yFYkz4spX11jPdFBBBYmM",
+        		"title": "Front-end Developer",
+        		"companyName": "NATEK"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQHEunNLpMShlA/company-logo_100_100/0/1617749448713?e=1655942400&v=beta&t=-4GjWdg9AXTPrz5Jd_Aay6-3Lxsrw0NZK5P_v7Ca7Tc",
+        		"title": "front-end web developer",
+        		"companyName": "netPR.pl Dostawca Oprogramowania w Chmurze"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4D0BAQEN3Ifl-svPpw/company-logo_100_100/0/1646224001969?e=1655942400&v=beta&t=K6U1MGeU8we3NCUpOctfN_yFYkz4spX11jPdFBBBYmM",
+        		"title": "Front-end Developer",
+        		"companyName": "NATEK"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4D0BAQGMF4KQ8pIXrA/company-logo_100_100/0/1559044139935?e=1655942400&v=beta&t=14ECfzpUCktOFlMty4h_IZjJN56J9x4IBCUUvY0aVqs",
+        		"title": "Frontend Engineer",
+        		"companyName": "OfferZen"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQHM7z780PeQtg/company-logo_100_100/0/1631174114138?e=1655942400&v=beta&t=Q1duEgxyppw489qDHZ1qTwBf2V4cPAmZO4xDKH9dkyo",
+        		"title": "Junior Full Stack .NET Developer",
+        		"companyName": "VSoft SA"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C560BAQH5uqGpoDcCBA/company-logo_100_100/0/1647140808595?e=1655942400&v=beta&t=RNliijfJGbkQsLn6FFWnz2x1VqpibT-lG6pfYbuCm2Y",
+        		"title": "Software Engineer (Full Stack)",
+        		"companyName": "hipages Group"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4D0BAQEpji4-VXOYqQ/company-logo_100_100/0/1639914986682?e=1655942400&v=beta&t=wkg5lvyj-MvxRodaZtylbxTIbQG9LhqZG_pTyoI1GN8",
+        		"title": "Junior Backend Developer",
+        		"companyName": "Mentax Software"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4D0BAQEN3Ifl-svPpw/company-logo_100_100/0/1646224001969?e=1655942400&v=beta&t=K6U1MGeU8we3NCUpOctfN_yFYkz4spX11jPdFBBBYmM",
+        		"title": "Front-end Developer",
+        		"companyName": "NATEK"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C560BAQHFJ_inaw25Cg/company-logo_100_100/0/1519912316571?e=1655942400&v=beta&t=pLVb4hRscYZx9_n26IoEaHwRuGvYSVA8FM1NLETk7cs",
+        		"title": "Web Developer",
+        		"companyName": "RTB House"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQEhYqI3jXTzlg/company-logo_100_100/0/1634640663137?e=1655942400&v=beta&t=Tv9_BarYGe2vhFFF-VYeG1_qwpz2nvjHTGz2DhX-MWs",
+        		"title": "Programista front-end (React)",
+        		"companyName": "iRonin.IT – Software House"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQH3t8OjZg4o_Q/company-logo_100_100/0/1625146635672?e=1655942400&v=beta&t=1s_9EBdThp7JLnkq1qehBEZPoYENwG12qX9UleOs-hA",
+        		"title": "Front-end Developer",
+        		"companyName": "Sapiens"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQEYcXzLcyNQmg/company-logo_100_100/0/1637765566327?e=1655942400&v=beta&t=SOzv2HU7GTOPU3zdl8MJxm9JVwChrgFbkq5WmMBz1-o",
+        		"title": "Programista front-end",
+        		"companyName": "HRO Digital"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C560BAQHUq0gGiqtYUw/company-logo_100_100/0/1607519073868?e=1655942400&v=beta&t=-tbV861lokn-L2N2N--iisblopNWmQIPLGkKHTxxuYo",
+        		"title": "[REMOTE] Web Developer - eCommerce Marketing Agency",
+        		"companyName": "Hustler Marketing"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4D0BAQHkvKA3mg3bww/company-logo_100_100/0/1625260146293?e=1655942400&v=beta&t=Ks8WL3uai3VjhCDYMkBR0HpvQNa0OTBdR0qzNBT8j6M",
+        		"title": "Frontend Developer",
+        		"companyName": "Emerson"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQGVxzkDwIiMqw/company-logo_100_100/0/1591090969351?e=1655942400&v=beta&t=sl-leL-0XqVJMxvOtKOjnq81g6kFw2Inn7hmd4ZetTQ",
+        		"title": "Java Full Stack Developer",
+        		"companyName": "Deviniti"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C560BAQE450y16y19fw/company-logo_100_100/0/1640272443301?e=1655942400&v=beta&t=2P_S8BA_eISWPRq3L3UJweKzzeSVsNg-INSAWKv4EOk",
+        		"title": "Full Stack Developer (Java+Angular)",
+        		"companyName": "Consdata"
+        	},
+        	{
+        		"logoLink": "https://media-exp1.licdn.com/dms/image/C4E0BAQER3c2_w5-5ig/company-logo_100_100/0/1553788786306?e=1655942400&v=beta&t=UmVBhGtmre3m5dayxoWvKsasJEpgbyLVWcUmNZQOSHE",
+        		"title": "Web Software Developer",
+        		"companyName": "Jobs Plus"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: authority
+        value: localhost:5001
+        id: pair_f6fa17a9ea7d4e84a3fdb14c8d974eab
+      - name: sec-ch-ua
+        value: '" Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"'
+        id: pair_65e9c216d23940acb1f37be5cf9eca59
+      - name: sec-ch-ua-mobile
+        value: ?0
+        id: pair_e9aafa724f87492fb3fdf3a00f0d125b
+      - name: user-agent
+        value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+          Gecko) Chrome/99.0.4844.82 Safari/537.36
+        id: pair_aaf2f223743d424799b2460efd068a35
+      - name: sec-ch-ua-platform
+        value: '"Windows"'
+        id: pair_51e0d1c4549648afb46acd16d937a91c
+      - name: content-type
+        value: application/json
+        id: pair_6000c80e048f4720b58df5576fcfb5f2
+      - name: accept
+        value: "*/*"
+        id: pair_d31768aec2d54c0ba03254eade28f7da
+      - name: origin
+        value: https://www.linkedin.com
+        id: pair_f23db9451ff34d9c804c7ef470871fb0
+      - name: sec-fetch-site
+        value: cross-site
+        id: pair_4d102bf3d4d04d328f0a03fcc2c7c956
+      - name: sec-fetch-mode
+        value: cors
+        id: pair_4875c89e98f0455d9c687f1bf58537ae
+      - name: sec-fetch-dest
+        value: empty
+        id: pair_5e34c04ecb564283ad789a2b92f8139d
+      - name: referer
+        value: https://www.linkedin.com/
+        id: pair_954bc9dc943048c6958ed94a47cb5072
+      - name: accept-language
+        value: pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
+        id: pair_431c003e682441fa8c08529018186354
+    authentication: {}
+    metaSortKey: -1648057470727
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    parentId: null
+    modified: 1648057470729
+    created: 1647085867070
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_acb54b04dadf492ea2eaeb8d466b5d9d
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1648056904250
+    created: 1647094225934
+    url: https://localhost:5001/offers
+    name: https://localhost:5001/offers
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+            "LogoLink":"https://media-exp1.licdn.com/dms/image/C560BAQGEEw9HXvgGzA/company-logo_100_100/0/1639383758689?e=1655337600&v=beta&t=MrTtO53QNLbOHFMF04X1sSpVJe2AS2AbrBuSm4AFVok",
+            "Title":"Senior ReactJS Developer",
+            "CompanyName":"Luxoft"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8f711bd358bf47bdabd65718ab041d56
+    authentication: {}
+    metaSortKey: -1647094225934
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e19caa7f96eb454280ad573e4fd0d7b4
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1647094201640
+    created: 1647094201640
+    url: https://localhost:5001/offers
+    name: https://localhost:5001/offers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1647094201640
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7e501ce1bb4f4b3da497915ded548381
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1647090304763
+    created: 1647090304763
+    url: ""
+    name: My Request
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1647090304763
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_c3d5418f8fc79b11a9b6f0271fbdb54ab400f897
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1647085867103
+    created: 1647085867103
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1647085867103
+    _type: environment
+  - _id: jar_c3d5418f8fc79b11a9b6f0271fbdb54ab400f897
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1647085867113
+    created: 1647085867113
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_98808a1b47ab4bbaab63db766adff069
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1648054963721
+    created: 1647085867084
+    fileName: New Document
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_3cfd6fc849d441bd9c57b2a4906ef232
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1647085867139
+    created: 1647085867139
+    name: Example Test Suite
+    _type: unit_test_suite
