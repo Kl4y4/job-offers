@@ -1,3 +1,4 @@
+using System.Collections.Immutable;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,6 +6,7 @@ using System.Threading.Tasks;
 using JobOffers.Entities;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using JobOffers.Dtos;
 
 namespace JobOffers.Repositories {
 
@@ -33,6 +35,11 @@ namespace JobOffers.Repositories {
             return await offersCollection.Find(filter).SingleOrDefaultAsync();
         }
 
+        public async Task<Offer> GetDuplicateAsync(OfferDto offerDto) {
+            var filter = filterBuilder.And(filterBuilder.Eq("Title", offerDto.Title), filterBuilder.Eq("CompanyName", offerDto.CompanyName));
+            return await offersCollection.Find(filter).SingleOrDefaultAsync();
+        }
+
         public async Task CreateOfferAsync(Offer offer) {
             await offersCollection.InsertOneAsync(offer);
         }
@@ -45,6 +52,14 @@ namespace JobOffers.Repositories {
         public async Task DeleteOfferAsync(Guid id) {
             var filter = filterBuilder.Eq(offer => offer.Id, id);
             await offersCollection.DeleteOneAsync(filter);
+        }
+
+        // false - nie powtarza sie
+        // true - powtarza
+        public bool CheckIfAlreadyExists(OfferDto offer) {
+            var filter = filterBuilder.And(filterBuilder.Eq("Title", offer.Title), filterBuilder.Eq("CompanyName", offer.CompanyName));
+            var duplicateOffer = offersCollection.Find(filter).SingleOrDefaultAsync();
+            return (duplicateOffer is null) ? true : false;
         }
 
     }
