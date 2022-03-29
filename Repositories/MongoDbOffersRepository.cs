@@ -40,6 +40,10 @@ namespace JobOffers.Repositories {
             return await offersCollection.Find(filter).SingleOrDefaultAsync();
         }
 
+        public async Task<IEnumerable<Offer>> GetOffersPagedAsync(int pageNum, int offerCount) {
+            return await offersCollection.Find(new BsonDocument()).Skip(pageNum > 0 ? ( (pageNum - 1) * offerCount ) : 0 ).Limit(offerCount).ToListAsync();
+        }
+
         public async Task CreateOfferAsync(Offer offer) {
             await offersCollection.InsertOneAsync(offer);
         }

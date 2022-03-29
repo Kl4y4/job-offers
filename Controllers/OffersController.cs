@@ -37,6 +37,11 @@ namespace JobOffers.Controllers {
         }
 
         // HttpGet - paginacja yoyoyo
+        [HttpGet("paged")]
+        public async Task<IEnumerable<OfferDto>> GetOffersPaginated(int pageNum, int offerCount) {
+            var offers = (await repository.GetOffersPagedAsync(pageNum, offerCount)).Select(offer => offer.AsDto());
+            return offers;
+        }
 
         // t - test endpoint
         // get, aby znalezc duplikatowe oferty; funkcja testowa

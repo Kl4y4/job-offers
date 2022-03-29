@@ -1,8 +1,66 @@
 _type: export
 __export_format: 4
-__export_date: 2022-03-29T03:51:16.870Z
+__export_date: 2022-03-29T20:08:18.212Z
 __export_source: insomnia.desktop.app:v2022.2.1
 resources:
+  - _id: req_e19caa7f96eb454280ad573e4fd0d7b4
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1648577368028
+    created: 1647094201640
+    url: https://localhost:5001/offers
+    name: https://localhost:5001/offers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1648577358749
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    parentId: null
+    modified: 1648057470729
+    created: 1647085867070
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_2588d1575aaf44c88c809be51d450503
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1648583253141
+    created: 1648577358699
+    url: https://localhost:5001/offers/paged
+    name: Pagination GET
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_bc1de83ea1244cf79069a9fa47d6213d
+        name: pageNum
+        value: "2"
+        description: ""
+      - id: pair_68f39d69130b40a6a3b2963a84886854
+        name: offerCount
+        value: "2"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: -1648577358699
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_f3308d0e789d4dea8c8168dc7ef3fac0
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
     modified: 1648523100445
@@ -34,14 +92,6 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    parentId: null
-    modified: 1648057470729
-    created: 1647085867070
-    name: New Document
-    description: ""
-    scope: design
-    _type: workspace
   - _id: req_0e0a5a765ebd454b9fd114fbd34d84e0
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
     modified: 1648504606665
@@ -65,7 +115,7 @@ resources:
     _type: request
   - _id: req_1d30c247969e44b5a2f775614b1b6d86
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1648525738574
+    modified: 1648570274146
     created: 1648326689570
     url: https://localhost:5001/offers/m
     name: ArrayPOST
@@ -137,35 +187,6 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_e19caa7f96eb454280ad573e4fd0d7b4
-    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1648058986305
-    created: 1647094201640
-    url: https://localhost:5001/offers
-    name: https://localhost:5001/offers
-    description: ""
-    method: GET
-    body: {}
-    parameters:
-      - id: pair_70504f1530114779a575fea560a38802
-        name: page
-        value: "3"
-        description: ""
-      - id: pair_73acebc2a02447a3a9d2f558f3f60d95
-        name: pageSize
-        value: "20"
-        description: ""
-    headers: []
-    authentication: {}
-    metaSortKey: -1647094201640
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: env_c3d5418f8fc79b11a9b6f0271fbdb54ab400f897
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
     modified: 1647085867103
@@ -186,7 +207,7 @@ resources:
     _type: cookie_jar
   - _id: spc_98808a1b47ab4bbaab63db766adff069
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1648501756580
+    modified: 1648570270445
     created: 1647085867084
     fileName: New Document
     contents: ""

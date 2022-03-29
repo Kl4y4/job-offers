@@ -12,6 +12,7 @@ namespace JobOffers.Repositories {
         Task<Offer> GetDuplicateAsync(OfferDto offerDto); // test
         Task<IEnumerable<Offer>> GetOffersAsync();
         Task<Offer> GetOfferAsync(Guid id);
+        Task<IEnumerable<Offer>> GetOffersPagedAsync(int pageNum, int offerCount);
         Task CreateOfferAsync(Offer offer);
         Task UpdateOfferAsync(Offer offer);
         Task DeleteOfferAsync(Guid id);
