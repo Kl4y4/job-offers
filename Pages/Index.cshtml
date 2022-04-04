@@ -8,19 +8,109 @@
 
 <div class="text-center">
 
-    <table style="padding: 10px; background-color: lightgray; border: 1px solid black;">
 
-    @foreach(var offer in offersList) {
-        <tr>
-            <td> @offer.LogoLink </td>
-            <td> @offer.Title </td>
-            <td> @offer.CompanyName </td>
-        </tr>
+@* <table class="hide" border="1">
+<thead>
+    <!-- tr>td+td+td -->
+    <tr>
+    <td>Firma</td>
+    <td>Stanowisko</td>
+    <td>Miasto</td>
+    <td>Link</td>
+    </tr>
+</thead>
+<tbody id="offers">
+    <tr>
+    <td>firma a</td>
+    <td>stanowisko</td>
+    <td>miasto</td>
+    <td><a href="http://"></a></td>
+    </tr>
+    <!-- wiecej wpisow -->
+</tbody>
+</table> *@
+<!-- #xspreadsheet -->
+<div id="xspreadsheet"></div>
+
+<!-- #panel>form>button+button+button -->
+
+<style>
+#panel form button {
+    display: inline-block;
+}
+</style>
+<div id="panel">
+<form action="" method="GET">
+    <h2>Job offers control panel</h2>
+    <div>
+    <summary>
+        <details>
+        <ul>
+            <li><label><input type="checkbox" checked> LinkedIn</label></li>
+            <li><label><input type="checkbox" checked> WeWork</label></li>
+            <li><label><input type="checkbox" checked> Pracuj.pl</label></li>
+        </ul>
+        </details>
+    </summary>
+    <button type="submit" name="cmd" value="lookForNewOffers">check for new offers</button>
+    </div>
+    <div><button name="cmd" value="refresh" id="refresh-btn">refresh</button></div>
+    <div><button id="clear-btn">clean database</button></div>
+    <div><button>download xls</button></div>
+</form>
+</div>
+
+<script>
+
+  function buildXSpreadsheetRowsFromData(data) {
+    const rows = {
+      len: data.length,
     }
-    </table>
+    for (let i = 0; i < data.length; i++) {
+      rows[i] = {
+        cells: {
+            0: {text: data[i].title},
+            1: {text: data[i].companyName}
+        }
+      }
+    }
+    return rows
+  }
 
-    <script>
-        console.log("cokolwiek");
-    </script>
+  function getOffers(url) {
+    return fetch(url).then(response => response.json());
+  }
+
+  const SHEET = x_spreadsheet('#xspreadsheet');
+  getOffers("https://localhost:5001/offers").then(data => {
+    console.log(data);
+    SHEET.loadData([{
+      rows: buildXSpreadsheetRowsFromData(data),
+      cols: {
+        0: { width: 200 },
+        1: { width: 200 }
+      }
+    }])
+  });
+
+  function clearDatabase() {
+    fetch("https://localhost:5001/offers", {
+      "method": "DELETE",
+      "headers": {}
+    })
+    .then(response => {
+      console.log(response);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+  }
+
+  const refreshBtn = document.getElementById("refresh-btn");
+  refreshBtn.addEventListener("click", getOffers);
+  const clearBtn = document.getElementById("clear-btn");
+  clearBtn.addEventListener("click", clearDatabase);
+
+</script>
 
 </div>

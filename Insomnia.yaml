@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2022-03-29T20:08:18.212Z
+__export_date: 2022-04-04T17:07:46.587Z
 __export_source: insomnia.desktop.app:v2022.2.1
 resources:
   - _id: req_e19caa7f96eb454280ad573e4fd0d7b4
@@ -113,9 +113,30 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_5713ab3aa0fe4af4b708a4885ec1e963
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1649080206055
+    created: 1649013033411
+    url: https://localhost:5001/offers
+    name: Clear Database
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1648326747507.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_1d30c247969e44b5a2f775614b1b6d86
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1648570274146
+    modified: 1649000395100
     created: 1648326689570
     url: https://localhost:5001/offers/m
     name: ArrayPOST
@@ -158,7 +179,7 @@ resources:
     _type: request
   - _id: req_acb54b04dadf492ea2eaeb8d466b5d9d
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1648525698403
+    modified: 1649000411489
     created: 1647094225934
     url: https://localhost:5001/offers
     name: https://localhost:5001/offers
@@ -168,9 +189,9 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"logoLink": "pic.com",
-        	"title": "smth epic",
-        	"companyName": "gamer inc"
+        	"logoLink": "ok.ok",
+        	"title": "ostatnia oferta",
+        	"companyName": "ja"
         }
     parameters: []
     headers:
@@ -207,7 +228,7 @@ resources:
     _type: cookie_jar
   - _id: spc_98808a1b47ab4bbaab63db766adff069
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1648570270445
+    modified: 1649092046115
     created: 1647085867084
     fileName: New Document
     contents: ""

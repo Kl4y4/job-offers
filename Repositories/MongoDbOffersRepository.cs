@@ -15,12 +15,13 @@ namespace JobOffers.Repositories {
         private const string databaseName = "joboffers";
         private const string collectionName = "offers";
 
+        private readonly IMongoDatabase database;
         private readonly IMongoCollection<Offer> offersCollection;
         private readonly FilterDefinitionBuilder<Offer> filterBuilder = Builders<Offer>.Filter;
 
         public MongoDbOffersRepository(IMongoClient mongoClient) {
 
-            IMongoDatabase database = mongoClient.GetDatabase(databaseName);
+            database = mongoClient.GetDatabase(databaseName);
             offersCollection = database.GetCollection<Offer>(collectionName);
 
         }
@@ -56,6 +57,11 @@ namespace JobOffers.Repositories {
         public async Task DeleteOfferAsync(Guid id) {
             var filter = filterBuilder.Eq(offer => offer.Id, id);
             await offersCollection.DeleteOneAsync(filter);
+        }
+
+        public async Task ClearDatabase() {
+            var filter = filterBuilder.Empty;
+            await offersCollection.DeleteManyAsync(filter);
         }
 
         // false - nie powtarza sie

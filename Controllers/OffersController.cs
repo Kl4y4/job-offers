@@ -95,9 +95,7 @@ namespace JobOffers.Controllers {
                 }
             }
 
-            return (isSuccess) 
-            ? Ok()
-            : UnprocessableEntity();
+            return (isSuccess) ? Ok() : UnprocessableEntity();
 
         }
 
@@ -145,7 +143,6 @@ namespace JobOffers.Controllers {
 
         // }
 
-
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateOfferAsync(Guid id, UpdateOfferDto offerDto) {
 
@@ -174,6 +171,12 @@ namespace JobOffers.Controllers {
 
             return NoContent();
 
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult> ClearDatabase() {
+            await repository.ClearDatabase();
+            return NoContent();
         }
 
     }
