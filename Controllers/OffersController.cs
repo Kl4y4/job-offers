@@ -8,6 +8,7 @@ using JobOffers.Dtos;
 using JobOffers.Entities;
 using JobOffers.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace JobOffers.Controllers {
 
@@ -157,6 +158,20 @@ namespace JobOffers.Controllers {
             };
 
             return NoContent();
+
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<ActionResult> PatchOfferAsync(Guid id, JsonPatchDocument patchDocument) {
+
+            var offer = await repository.GetOfferAsync(id);
+
+            if (offer is null) return NotFound();
+
+            patchDocument.ApplyTo(offer);
+            await repository.UpdateOfferAsync(offer);
+
+            return Ok();
 
         }
 

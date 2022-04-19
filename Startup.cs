@@ -18,6 +18,9 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc.Formatters;
 
 // docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo
 namespace JobOffers
@@ -47,7 +50,7 @@ namespace JobOffers
 
             services.AddControllers(options => {
                 options.SuppressAsyncSuffixInActionNames = false;
-            });
+            }).AddNewtonsoftJson();
 
             services.AddRazorPages();
 
@@ -87,5 +90,6 @@ namespace JobOffers
                 endpoints.MapRazorPages();
             });
         }
+
     }
 }

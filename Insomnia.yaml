@@ -1,8 +1,49 @@
 _type: export
 __export_format: 4
-__export_date: 2022-04-04T17:07:46.587Z
+__export_date: 2022-04-19T21:17:31.039Z
 __export_source: insomnia.desktop.app:v2022.2.1
 resources:
+  - _id: req_02f749404c3f45139e623bc1734e6efe
+    parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    modified: 1650402878498
+    created: 1650400467518
+    url: https://localhost:5001/offers/0d06dd44-0ee3-4807-8e40-5ec86186efad
+    name: Patch
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        	{
+        		"op": "replace",
+        		"path": "/Title",
+        		"value": "maybe"
+        	}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a1ac491c7c8546a0b7b86fb068415327
+    authentication: {}
+    metaSortKey: -1650400467518
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_7fdc1b1551044fa9bb02c625d23c63f8
+    parentId: null
+    modified: 1648057470729
+    created: 1647085867070
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
   - _id: req_e19caa7f96eb454280ad573e4fd0d7b4
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
     modified: 1648577368028
@@ -24,17 +65,9 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    parentId: null
-    modified: 1648057470729
-    created: 1647085867070
-    name: New Document
-    description: ""
-    scope: design
-    _type: workspace
   - _id: req_2588d1575aaf44c88c809be51d450503
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1648583253141
+    modified: 1649093848825
     created: 1648577358699
     url: https://localhost:5001/offers/paged
     name: Pagination GET
@@ -136,7 +169,7 @@ resources:
     _type: request
   - _id: req_1d30c247969e44b5a2f775614b1b6d86
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1649000395100
+    modified: 1650401698592
     created: 1648326689570
     url: https://localhost:5001/offers/m
     name: ArrayPOST
@@ -179,7 +212,7 @@ resources:
     _type: request
   - _id: req_acb54b04dadf492ea2eaeb8d466b5d9d
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1649000411489
+    modified: 1650401704648
     created: 1647094225934
     url: https://localhost:5001/offers
     name: https://localhost:5001/offers
@@ -190,7 +223,7 @@ resources:
       text: |-
         {
         	"logoLink": "ok.ok",
-        	"title": "ostatnia oferta",
+        	"title": "maybe oferta",
         	"companyName": "ja"
         }
     parameters: []
@@ -228,7 +261,7 @@ resources:
     _type: cookie_jar
   - _id: spc_98808a1b47ab4bbaab63db766adff069
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1649092046115
+    modified: 1650400431792
     created: 1647085867084
     fileName: New Document
     contents: ""
