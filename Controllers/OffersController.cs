@@ -189,8 +189,8 @@ namespace JobOffers.Controllers {
         }
 
         [HttpDelete]
-        public async Task<ActionResult> ClearDatabase() {
-            await repository.ClearDatabase();
+        public async Task<ActionResult> DeleteOffersAsync() {
+            await repository.DeleteAll();
             return NoContent();
         }
 

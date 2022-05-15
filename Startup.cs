@@ -23,10 +23,10 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc.Formatters;
 
 // docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo
-namespace JobOffers
-{
-    public class Startup
-    {
+namespace JobOffers {
+
+    public class Startup {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -63,17 +63,20 @@ namespace JobOffers
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+
+            if (env.IsDevelopment()) {
+
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "JobOffers v1"));
+            
             } else {
+            
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
+            
             }
 
             app.UseHttpsRedirection();
@@ -84,8 +87,7 @@ namespace JobOffers
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
+            app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });

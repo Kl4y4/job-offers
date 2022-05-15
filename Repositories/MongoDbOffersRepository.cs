@@ -59,7 +59,7 @@ namespace JobOffers.Repositories {
             await offersCollection.DeleteOneAsync(filter);
         }
 
-        public async Task ClearDatabase() {
+        public async Task DeleteAll() {
             var filter = filterBuilder.Empty;
             await offersCollection.DeleteManyAsync(filter);
         }

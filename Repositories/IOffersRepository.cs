@@ -16,7 +16,7 @@ namespace JobOffers.Repositories {
         Task CreateOfferAsync(Offer offer);
         Task UpdateOfferAsync(Offer offer);
         Task DeleteOfferAsync(Guid id);
-        Task ClearDatabase();
+        Task DeleteAll();
         bool CheckIfAlreadyExists(OfferDto offer);
 
     }
