@@ -79,9 +79,10 @@
   SHEET.on('cell-edited', (text, ri, ci) => {
 
     if (ri < offersCount) {
-      
+
       let id = SHEET.cell(ri, 0).text;
       let entPath = "";
+
       if (ci == 1) {
         entPath = "/Title";
       } else if (ci == 2) {
@@ -128,28 +129,37 @@
   function addToDb() {
     let i = offersCount;
     let newOffers = [];
-    @* while(SHEET.rows[i].cells.0.text != "") {
-      offersCount++;
-      newOffer = {
-        logoLink: "",
-        title: rows[i].cells.0.text,
-        companyName: rows[i].cells.1.text
+    for(let i = offersCount; i < offersCount + 20; i++) {
+
+      if(SHEET.cell(i, 1) != null) {
+        
+        newOffer = {
+          logoLink: "",
+          title: SHEET.cell(i, 1).text,
+          companyName: SHEET.cell(i, 2).text
+        }
+
+        newOffers.push(newOffer);
+
       }
-      newOffers.push(newOffer);
+
     }
-    fetch("https://localhost:5001/offers/m", {
-      "method": "POST",
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "body": newOffers
-    })
-    .then(response => {
-      console.log(response);
-    })
-    .catch(err => {
-      console.error(err);
-    }); *@
+
+    if (newOffers.length > 0) {
+      fetch("https://localhost:5001/offers/m", {
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": JSON.stringify(newOffers)
+      })
+      .then(response => {
+        console.log(response);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+    }
 
   }
 
