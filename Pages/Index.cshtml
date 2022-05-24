@@ -47,8 +47,15 @@
     const rows = {
       len: data.length + 20,
     }
+    rows[0] = {
+      cells: {
+        0: { text: "id" },
+        1: { text: "title" },
+        2: { text: "companyName" }
+      }
+    }
     for (let i = 0; i < data.length; i++) {
-      rows[i] = {
+      rows[i + 1] = {
         cells: {
             0: {text: data[i].id },
             1: {text: data[i].title},
@@ -91,7 +98,7 @@
 
       let obj = [{
         op: "replace",
-        path: entPath,
+        path: SHEET.cell(0, ci).text,
         value: text
       }];
       
