@@ -37,7 +37,7 @@ namespace JobOffers.Controllers {
 
         }
 
-        // HttpGet - paginacja yoyoyo
+        // HttpGet - paginacja
         [HttpGet("paged")]
         public async Task<IEnumerable<OfferDto>> GetOffersPaginated(int pageNum, int offerCount) {
             var offers = (await repository.GetOffersPagedAsync(pageNum, offerCount)).Select(offer => offer.AsDto());
@@ -54,12 +54,24 @@ namespace JobOffers.Controllers {
 
         [HttpPost]
         public async Task<ActionResult<OfferDto>> CreateItemAsync(CreateOfferDto offerDto) {
-
+            
+            DateTime publishDateConv;
+            DateTime.TryParse(offerDto.PublishedDate, out publishDateConv);
+            
             Offer offer = new() {
                 Id = new Guid(),
                 LogoLink = offerDto.LogoLink,
                 Title = offerDto.Title,
-                CompanyName = offerDto.CompanyName
+                CompanyName = offerDto.CompanyName,
+                AddedDate = DateTime.UtcNow,
+                PublishedDate = publishDateConv,
+                Etat = offerDto.Etat,
+                Location = offerDto.Location,
+                Salary = offerDto.Salary,
+                Remote = offerDto.Remote,
+                Contract = offerDto.Contract,
+                Tags = offerDto.Tags,
+                PostedSite = offerDto.PostedSite
             };
 
             var duplicate = await repository.GetDuplicateAsync(offer.AsDto());
@@ -76,15 +88,28 @@ namespace JobOffers.Controllers {
         [HttpPost("m")]
         public async Task<ActionResult> CreateItemsAsync(CreateOfferDto[] offerDtos) {    
 
-            List<Offer> createdOffers = new List<Offer>();
             bool isSuccess = false;
 
+            DateTime publishDateConv;
+
             for (int i = 0; i < offerDtos.Length; i++) {
+
+                DateTime.TryParse(offerDtos[i].PublishedDate, out publishDateConv);
+
                 Offer offer = new() {
                     Id = new Guid(),
                     LogoLink = offerDtos[i].LogoLink,
                     Title = offerDtos[i].Title,
-                    CompanyName = offerDtos[i].CompanyName
+                    CompanyName = offerDtos[i].CompanyName,
+                    AddedDate = DateTime.UtcNow,
+                    PublishedDate = publishDateConv,
+                    Etat = offerDtos[i].Etat,
+                    Location = offerDtos[i].Location,
+                    Salary = offerDtos[i].Salary,
+                    Remote = offerDtos[i].Remote,
+                    Contract = offerDtos[i].Contract,
+                    Tags = offerDtos[i].Tags,
+                    PostedSite = offerDtos[i].PostedSite
                 };
 
                 var duplicate = await repository.GetDuplicateAsync(offer.AsDto());
@@ -92,57 +117,12 @@ namespace JobOffers.Controllers {
                 if (duplicate is null) {
                     await repository.CreateOfferAsync(offer);
                     isSuccess = true;
-                    createdOffers.Add(offer);
                 }
             }
 
             return (isSuccess) ? Ok() : UnprocessableEntity();
 
         }
-
-        // [HttpPost]
-        // public async Task<ActionResult<OfferDto>> CreateItemAsync(CreateOfferDto offerDto) {
-
-        //     Offer offer = new() {
-        //         Id = new Guid(),
-        //         LogoLink = offerDto.LogoLink,
-        //         Title = offerDto.Title,
-        //         CompanyName = offerDto.CompanyName
-        //     };
-
-        //     if (repository.CheckIfAlreadyExists(offer.AsDto()) == false) {
-        //         await repository.CreateOfferAsync(offer);
-        //         return CreatedAtAction(nameof(GetOfferAsync), new { id = offer.Id }, offer.AsDto());
-        //     } else {
-        //         return NoContent();
-        //     }
-
-        // }
-
-        // [HttpPost("m")]
-        // public async IAsyncEnumerable<ActionResult> CreateItemsAsync(OfferDto[] offerDtos) {    
-
-        //     IAsyncEnumerable<ActionResult>[] resultArr = new IAsyncEnumerable<ActionResult>[offerDtos.Length];
-
-        //     for (int i = 0; i < offerDtos.Length; i++) {
-        //         Offer newOffer = new() {
-        //             Id = new Guid(),
-        //             LogoLink = offerDtos[i].LogoLink,
-        //             Title = offerDtos[i].CompanyName,
-        //             CompanyName = offerDtos[i].CompanyName
-        //         };
-
-        //         if (!repository.CheckIfAlreadyExists(newOffer.AsDto())) {
-        //             await repository.CreateOfferAsync(newOffer);
-        //             resultArr[i] = (IAsyncEnumerable<ActionResult>)CreatedAtAction(nameof(GetOfferAsync), new { id = newOffer.Id }, newOffer.AsDto());
-        //         } else { 
-        //             resultArr[i] = (IAsyncEnumerable<ActionResult>)NoContent();
-        //         }
-        //     }
-
-        //     yield return resultArr;
-
-        // }
 
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateOfferAsync(Guid id, UpdateOfferDto offerDto) {
@@ -151,10 +131,23 @@ namespace JobOffers.Controllers {
 
             if (existingOffer is null) return NotFound();
 
-            Offer updatedOffer = existingOffer with {
+            DateTime publishDateConv;
+            DateTime.TryParse(offerDto.PublishedDate, out publishDateConv);
+
+            Offer offer = new() {
+                Id = new Guid(),
                 LogoLink = offerDto.LogoLink,
                 Title = offerDto.Title,
-                CompanyName = offerDto.CompanyName
+                CompanyName = offerDto.CompanyName,
+                AddedDate = DateTime.UtcNow,
+                PublishedDate = publishDateConv,
+                Etat = offerDto.Etat,
+                Location = offerDto.Location,
+                Salary = offerDto.Salary,
+                Remote = offerDto.Remote,
+                Contract = offerDto.Contract,
+                Tags = offerDto.Tags,
+                PostedSite = offerDto.PostedSite
             };
 
             return NoContent();

@@ -4,15 +4,20 @@ namespace JobOffers.Entities {
     public record Offer {
 
         public Guid Id { get; init; }
+        public Uri OfferLink { get; init; }
         public Uri LogoLink { get; init; }
         public string Title { get; init; }
         public string CompanyName { get; init; }
-        // public bool FullTime { get; init; }
-        // public string Location { get; init; }
-        // public DateTimeOffset PublishedOffset { get; init; }
-        // public DateTimeOffset AddedOffset { get; init; }
-        // public int Salary { get; init; }
-        // public bool IsRemote { get; init; }
+        public string CompanySize { get; init; }
+        public DateTime AddedDate { get; init; }
+        public DateTime PublishedDate { get; init; }
+        public string Etat { get; init; }
+        public string Location { get; init; }
+        public string Salary { get; init; }
+        public string Remote { get; init; }
+        public string Contract { get; init; }
+        public string Tags { get; init; }
+        public string PostedSite { get; init; }
 
     }
 }

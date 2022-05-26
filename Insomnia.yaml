@@ -1,13 +1,13 @@
 _type: export
 __export_format: 4
-__export_date: 2022-04-19T21:17:31.039Z
-__export_source: insomnia.desktop.app:v2022.2.1
+__export_date: 2022-05-26T15:07:51.633Z
+__export_source: insomnia.desktop.app:v2022.3.0
 resources:
   - _id: req_02f749404c3f45139e623bc1734e6efe
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1650402878498
+    modified: 1652634718855
     created: 1650400467518
-    url: https://localhost:5001/offers/0d06dd44-0ee3-4807-8e40-5ec86186efad
+    url: https://localhost:5001/offers/c7df33e7-be46-4d5f-948e-dc0f4557f8d0
     name: Patch
     description: ""
     method: PATCH
@@ -17,8 +17,8 @@ resources:
         [
         	{
         		"op": "replace",
-        		"path": "/Title",
-        		"value": "maybe"
+        		"path": "/CompanyName",
+        		"value": "cokolwiek"
         	}
         ]
     parameters: []
@@ -127,9 +127,9 @@ resources:
     _type: request
   - _id: req_0e0a5a765ebd454b9fd114fbd34d84e0
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1648504606665
+    modified: 1653387420485
     created: 1648326805445
-    url: https://localhost:5001/offers/f8c689c1-f168-44a2-8159-4206d0878e0f
+    url: https://localhost:5001/offers/55d3441e-0d1d-45ce-b6e0-3c62f4530f8e
     name: Del
     description: ""
     method: DELETE
@@ -169,7 +169,7 @@ resources:
     _type: request
   - _id: req_1d30c247969e44b5a2f775614b1b6d86
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1650401698592
+    modified: 1653490641944
     created: 1648326689570
     url: https://localhost:5001/offers/m
     name: ArrayPOST
@@ -177,24 +177,7 @@ resources:
     method: POST
     body:
       mimeType: application/json
-      text: |-
-        [
-        	{
-        		"logoLink": "example link",
-        		"title": "example title",
-        		"companyName": "example name"
-        	},
-        	{
-        		"logoLink": "example link2",
-        		"title": "example title2",
-        		"companyName": "example name2"
-        	},
-        	{
-        		"logoLink": "example link3",
-        		"title": "example title3",
-        		"companyName": "example name3"
-        	}
-        ]
+      text: "[]"
     parameters: []
     headers:
       - name: Content-Type
@@ -212,7 +195,7 @@ resources:
     _type: request
   - _id: req_acb54b04dadf492ea2eaeb8d466b5d9d
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1650401704648
+    modified: 1653577462997
     created: 1647094225934
     url: https://localhost:5001/offers
     name: https://localhost:5001/offers
@@ -222,9 +205,18 @@ resources:
       mimeType: application/json
       text: |-
         {
+        	"offerLink": "oferta.com/whatever",
         	"logoLink": "ok.ok",
         	"title": "maybe oferta",
-        	"companyName": "ja"
+        	"companyName": "ja",
+        	"publishedDate": "25.01.2022",
+        	"etat": "Full-time",
+        	"location": "Warsaw",
+        	"salary": "200-3000",
+        	"remote": "Hybrydowa",
+        	"contract": "UoP",
+        	"tags": "React,Angular,JavaScript,CSS",
+        	"postedSite": "linkedin"
         }
     parameters: []
     headers:
@@ -261,7 +253,7 @@ resources:
     _type: cookie_jar
   - _id: spc_98808a1b47ab4bbaab63db766adff069
     parentId: wrk_7fdc1b1551044fa9bb02c625d23c63f8
-    modified: 1650400431792
+    modified: 1653576258491
     created: 1647085867084
     fileName: New Document
     contents: ""

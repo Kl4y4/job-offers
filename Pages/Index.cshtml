@@ -52,7 +52,8 @@
         0: { text: "id" },
         1: { text: "title" },
         2: { text: "companyName" },
-        3: { text: "logoLink" }
+        3: { text: "logoLink" },
+        4: { text: "addedDate" }
       }
     }
     for (let i = 0; i < data.length; i++) {
@@ -61,7 +62,8 @@
             0: { text: data[i].id },
             1: { text: data[i].title },
             2: { text: data[i].companyName },
-            3: { text: data[i].logoLink }
+            3: { text: data[i].logoLink },
+            4: { text: data[i].addedDate }
         }
       }
     }
@@ -86,6 +88,8 @@
   });
 
   SHEET.on('cell-edited', (text, ri, ci) => {
+
+    if (SHEET.cell(0, ci).text == "addedDate") return;
 
     if (ri < offersCount) {
 
