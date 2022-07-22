@@ -56,7 +56,11 @@ namespace JobOffers.Controllers {
         public async Task<ActionResult<OfferDto>> CreateItemAsync(CreateOfferDto offerDto) {
             
             DateTime publishDateConv;
-            DateTime.TryParse(offerDto.PublishedDate, out publishDateConv);
+            if (offerDto.PublishedDate != null) {
+                DateTime.TryParse(offerDto.PublishedDate, out publishDateConv);
+            } else {
+                publishDateConv = DateTime.UtcNow;
+            }
             
             Offer offer = new() {
                 Id = new Guid(),
@@ -65,7 +69,7 @@ namespace JobOffers.Controllers {
                 CompanyName = offerDto.CompanyName,
                 AddedDate = DateTime.UtcNow,
                 PublishedDate = publishDateConv,
-                Etat = offerDto.Etat,
+                WorkSchedule = offerDto.WorkSchedule,
                 Location = offerDto.Location,
                 Salary = offerDto.Salary,
                 Remote = offerDto.Remote,
@@ -103,7 +107,7 @@ namespace JobOffers.Controllers {
                     CompanyName = offerDtos[i].CompanyName,
                     AddedDate = DateTime.UtcNow,
                     PublishedDate = publishDateConv,
-                    Etat = offerDtos[i].Etat,
+                    WorkSchedule = offerDtos[i].WorkSchedule,
                     Location = offerDtos[i].Location,
                     Salary = offerDtos[i].Salary,
                     Remote = offerDtos[i].Remote,
@@ -141,7 +145,7 @@ namespace JobOffers.Controllers {
                 CompanyName = offerDto.CompanyName,
                 AddedDate = DateTime.UtcNow,
                 PublishedDate = publishDateConv,
-                Etat = offerDto.Etat,
+                WorkSchedule = offerDto.WorkSchedule,
                 Location = offerDto.Location,
                 Salary = offerDto.Salary,
                 Remote = offerDto.Remote,

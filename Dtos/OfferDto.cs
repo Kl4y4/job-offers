@@ -12,7 +12,7 @@ namespace JobOffers.Dtos {
         public string CompanySize { get; init; }
         public string AddedDate { get; init; }
         public string PublishedDate { get; init; }
-        public string Etat { get; init; }
+        public string WorkSchedule { get; init; }
         public string Location { get; init; }
         public string Salary { get; init; }
         public string Remote { get; init; }

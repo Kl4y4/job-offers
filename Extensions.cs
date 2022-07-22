@@ -19,7 +19,7 @@ namespace JobOffers {
                 CompanySize = offer.CompanySize,
                 AddedDate = addedDateString,
                 PublishedDate = publishedDateString,
-                Etat = offer.Etat,
+                WorkSchedule = offer.WorkSchedule,
                 Location = offer.Location,
                 Salary = offer.Salary,
                 Remote = offer.Remote,

@@ -11,7 +11,7 @@ namespace JobOffers.Entities {
         public string CompanySize { get; init; }
         public DateTime AddedDate { get; init; }
         public DateTime PublishedDate { get; init; }
-        public string Etat { get; init; }
+        public string WorkSchedule { get; init; }
         public string Location { get; init; }
         public string Salary { get; init; }
         public string Remote { get; init; }
