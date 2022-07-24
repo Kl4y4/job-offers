@@ -25,7 +25,8 @@ namespace JobOffers {
                 Remote = offer.Remote,
                 Contract = offer.Contract,
                 Tags = offer.Tags,
-                PostedSite = offer.PostedSite
+                PostedSite = offer.PostedSite,
+                Description = offer.Description
             };
 
         }

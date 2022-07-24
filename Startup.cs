@@ -22,6 +22,7 @@ using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc.Formatters;
 
+// sudo chmod 666 /var/run/docker.sock
 // docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo
 namespace JobOffers {
 

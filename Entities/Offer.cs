@@ -18,6 +18,7 @@ namespace JobOffers.Entities {
         public string Contract { get; init; }
         public string Tags { get; init; }
         public string PostedSite { get; init; }
+        public string Description { get; init; }
 
     }
 }

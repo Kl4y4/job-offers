@@ -75,7 +75,8 @@ namespace JobOffers.Controllers {
                 Remote = offerDto.Remote,
                 Contract = offerDto.Contract,
                 Tags = offerDto.Tags,
-                PostedSite = offerDto.PostedSite
+                PostedSite = offerDto.PostedSite,
+                Description = offerDto.Description
             };
 
             var duplicate = await repository.GetDuplicateAsync(offer.AsDto());
@@ -113,7 +114,8 @@ namespace JobOffers.Controllers {
                     Remote = offerDtos[i].Remote,
                     Contract = offerDtos[i].Contract,
                     Tags = offerDtos[i].Tags,
-                    PostedSite = offerDtos[i].PostedSite
+                    PostedSite = offerDtos[i].PostedSite,
+                    Description = offerDtos[i].Description
                 };
 
                 var duplicate = await repository.GetDuplicateAsync(offer.AsDto());
@@ -151,7 +153,8 @@ namespace JobOffers.Controllers {
                 Remote = offerDto.Remote,
                 Contract = offerDto.Contract,
                 Tags = offerDto.Tags,
-                PostedSite = offerDto.PostedSite
+                PostedSite = offerDto.PostedSite,
+                Description = offerDto.Description
             };
 
             return NoContent();
