@@ -50,20 +50,42 @@
     rows[0] = {
       cells: {
         0: { text: "id" },
-        1: { text: "title" },
-        2: { text: "companyName" },
-        3: { text: "logoLink" },
-        4: { text: "addedDate" }
+        1: { text: "offerLink" },
+        2: { text: "logoLink" },
+        3: { text: "title" },
+        4: { text: "companyName" },
+        5: { text: "companySize" },
+        6: { text: "addedDate" },
+        7: { text: "publishedDate" },
+        8: { text: "workSchedule" },
+        9: { text: "location" },
+        10: { text: "salary" },
+        11: { text: "remote" },
+        12: { text: "contract" },
+        13: { text: "tags" },
+        14: { text: "postedSite" },
+        15: { text: "description" } 
       }
     }
     for (let i = 0; i < data.length; i++) {
       rows[i + 1] = {
         cells: {
             0: { text: data[i].id },
-            1: { text: data[i].title },
-            2: { text: data[i].companyName },
-            3: { text: data[i].logoLink },
-            4: { text: data[i].addedDate }
+            1: { text: data[i].offerLink },
+            2: { text: data[i].logoLink },
+            3: { text: data[i].title },
+            4: { text: data[i].companyName },
+            5: { text: data[i].companySize },
+            6: { text: data[i].addedDate },
+            7: { text: data[i].publishedDate },
+            8: { text: data[i].workSchedule },
+            9: { text: data[i].location },
+            10: { text: data[i].salary },
+            11: { text: data[i].remote },
+            12: { text: data[i].contract },
+            13: { text: data[i].tags },
+            14: { text: data[i].postedSite },
+            15: { text: data[i].description }
         }
       }
     }
