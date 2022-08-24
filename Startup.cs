@@ -44,7 +44,8 @@ namespace JobOffers {
 
             services.AddSingleton<IMongoClient>(ServiceProvider => {
                 var settings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
-                return new MongoClient(settings.ConnectionString);
+                // return new MongoClient(settings.ConnectionString);
+                return new MongoClient("mongodb+srv://adminadmin:cPlZY3er7kpE5w5s@job-offers.0xkhled.mongodb.net/test");
             });
 
             services.AddSingleton<IOffersRepository, MongoDbOffersRepository>();
