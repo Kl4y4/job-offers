@@ -102,7 +102,7 @@
   }
 
   const SHEET = x_spreadsheet('#xspreadsheet');
-  getOffers("https://localhost:5001/offers").then(data => {
+  getOffers("/offers").then(data => {
     console.log(data);
     SHEET.loadData([{
       rows: buildXSpreadsheetRowsFromData(data),
@@ -127,7 +127,7 @@
         value: text
       }];
       
-      fetch(`https://localhost:5001/offers/${id}`, {
+      fetch(`/offers/${id}`, {
         "method": "PATCH",
         "headers": {
           "Content-Type": "application/json"
@@ -146,7 +146,7 @@
   });
 
   function clearDatabase() {
-    fetch("https://localhost:5001/offers", {
+    fetch("/offers", {
       "method": "DELETE",
       "headers": {}
     })
@@ -179,7 +179,7 @@
     }
 
     if (newOffers.length > 0) {
-      fetch("https://localhost:5001/offers/m", {
+      fetch("/offers/m", {
         "method": "POST",
         "headers": {
           "Content-Type": "application/json"
