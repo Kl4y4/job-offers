@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 namespace JobOffers.Dtos {
     public record CreateOfferDto {
 
-        [Required]
         public Uri OfferLink { get; init; }
         public Uri LogoLink { get; init; }
         [Required]
