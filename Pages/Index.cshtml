@@ -68,8 +68,7 @@
         12: { text: "contract" },
         13: { text: "tags" },
         14: { text: "postedSite" },
-        15: { text: "description" },
-        18: { text: "lolxd" }
+        15: { text: "description" }
       }
     }
     for (let i = 0; i < data.length; i++) {
@@ -127,7 +126,7 @@
         value: text
       }];
       
-      fetch(`/offers/${id}`, {
+      fetch(`/${id}`, {
         "method": "PATCH",
         "headers": {
           "Content-Type": "application/json"
