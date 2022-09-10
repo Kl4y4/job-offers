@@ -18,25 +18,24 @@
 }
 </style>
 <div id="panel">
-<form action="" method="">
-    <h2>Job offers control panel</h2>
-    <div>
-    @* <summary>
-        <details>
-        <ul>
-            <li><label><input type="checkbox" checked> LinkedIn</label></li>
-            <li><label><input type="checkbox" checked> WeWork</label></li>
-            <li><label><input type="checkbox" checked> Pracuj.pl</label></li>
-        </ul>
-        </details>
-    </summary> *@
-    <button type="submit" name="cmd" value="lookForNewOffers">check for new offers</button>
-    </div>
-    <div><button name="cmd" value="refresh" id="refresh-btn">refresh</button></div>
-    <div><button id="clear-btn">clear database</button></div>
-    <div><button>download xls</button></div>
-  </form>
-  <div><button id="add-btn">add to db</button></div>
+  <div>
+    <h1 style="font-family: Comic Sans MS;">Job Offers Control Panel</h1>
+  @* <summary>
+      <details>
+      <ul>
+          <li><label><input type="checkbox" checked> LinkedIn</label></li>
+          <li><label><input type="checkbox" checked> WeWork</label></li>
+          <li><label><input type="checkbox" checked> Pracuj.pl</label></li>
+      </ul>
+      </details>
+  </summary> *@
+  <div id="btn-panel">
+    <form><button type="submit" name="cmd" value="lookForNewOffers" class="panel-btn">Check for new offers</button></form>
+    <form><button name="cmd" value="refresh" id="refresh-btn" class="panel-btn">Refresh</button></form>
+    <button id="clear-btn" class="panel-btn">Clear database</button>
+    <button class="panel-btn">Download XLS</button>
+    <button id="add-btn" class="panel-btn">Add new rows</button>
+  </div>
 </div>
 
 <script>

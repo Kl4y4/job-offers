@@ -19,7 +19,7 @@ namespace JobOffers.Controllers {
         private readonly IOffersRepository repository;
 
         public OffersController(IOffersRepository _repository) { this.repository = _repository; }
-
+        
 
         [HttpGet]
         public async Task<IEnumerable<OfferDto>> GetOffers() {
