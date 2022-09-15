@@ -64,7 +64,7 @@ namespace JobOffers.Controllers {
             
             Offer offer = new() {
                 Id = new Guid(),
-                offerLink = offerDto.offerLink,
+                OfferLink = offerDto.OfferLink,
                 LogoLink = offerDto.LogoLink,
                 Title = offerDto.Title,
                 CompanyName = offerDto.CompanyName,
