@@ -64,6 +64,7 @@ namespace JobOffers.Controllers {
             
             Offer offer = new() {
                 Id = new Guid(),
+                offerLink = offerDto.offerLink,
                 LogoLink = offerDto.LogoLink,
                 Title = offerDto.Title,
                 CompanyName = offerDto.CompanyName,
@@ -104,6 +105,7 @@ namespace JobOffers.Controllers {
 
                 Offer offer = new() {
                     Id = new Guid(),
+                    offerLink = offerDtos[i].offerLink,
                     LogoLink = offerDtos[i].LogoLink,
                     Title = offerDtos[i].Title,
                     CompanyName = offerDtos[i].CompanyName,
