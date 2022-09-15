@@ -99,7 +99,8 @@ namespace JobOffers.Controllers {
 
             for (int i = 0; i < offerDtos.Length; i++) {
 
-                DateTime.TryParse(offerDtos[i].PublishedDate, out publishDateConv);
+                if (offerDtos[i].PublishedDate != null) DateTime.TryParse(offerDtos[i].PublishedDate, out publishDateConv);
+                else publishDateConv = DateTime.UtcNow();
 
                 Offer offer = new() {
                     Id = new Guid(),
