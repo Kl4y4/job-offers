@@ -159,20 +159,20 @@
       if(SHEET.cell(i, 3) != undefined) {
         
         newOffer = {
-          offerLink: SHEET.cell(i, 1).text,
-          logoLink: SHEET.cell(i, 2).text,
+          offerLink: SHEET.cell(i, 1).text ?? null,
+          logoLink: SHEET.cell(i, 2).text ?? null,
           title: SHEET.cell(i, 3).text,
           companyName: SHEET.cell(i, 4).text,
-          companySize: SHEET.cell(i, 5).text,
-          publishedDate: SHEET.cell(i, 7).text,
-          workSchedule: SHEET.cell(i, 8).text,
-          location: SHEET.cell(i, 9).text,
-          salary: SHEET.cell(i, 10).text,
-          remote: SHEET.cell(i, 11).text,
-          contract: SHEET.cell(i, 12).text,
-          tags: SHEET.cell(i, 13).text,
-          postedSite: SHEET.cell(i, 14).text,
-          description: SHEET.cell(i, 15).text,
+          companySize: SHEET.cell(i, 5).text ?? null,
+          publishedDate: SHEET.cell(i, 7).text ?? null,
+          workSchedule: SHEET.cell(i, 8).text ?? null,
+          location: SHEET.cell(i, 9).text ?? null,
+          salary: SHEET.cell(i, 10).text ?? null,
+          remote: SHEET.cell(i, 11).text ?? null,
+          contract: SHEET.cell(i, 12).text ?? null,
+          tags: SHEET.cell(i, 13).text ?? null,
+          postedSite: SHEET.cell(i, 14).text ?? null,
+          description: SHEET.cell(i, 15).text ?? null,
         }
 
         newOffers.push(newOffer);
